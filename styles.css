@@ -1,7 +1,7 @@
-/* ============================================
-   ELEGANT GOLD & DARK NAVY COLOR SCHEME
-   ============================================ */
-
+@font-face {
+    font-family: 'Cinzel Decorative';
+    src: url('./Assets/fonts/Cinzel_Decorative/CinzelDecorative-Regular.ttf') format('truetype');
+}
 :root {
     --primary-navy: #1a2332;
     --dark-navy: #0f1419;
@@ -14,6 +14,8 @@
     --accent-navy: #2a3a52;
     --transition-smooth: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
+
+
 
 * {
     margin: 0;
@@ -164,6 +166,7 @@ body {
 
 .nav-logo {
     font-size: 1.8rem;
+    font-family: 'Cinzel Decorative', serif;
     font-weight: bold;
     color: var(--gold);
     display: flex;
@@ -174,6 +177,13 @@ body {
 
 .logo-icon {
     font-size: 2rem;
+}
+
+.logo-icon img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+
 }
 
 .nav-menu {
@@ -187,6 +197,7 @@ body {
     text-decoration: none;
     font-size: 1rem;
     font-weight: 500;
+    font-family: 'Cinzel Decorative', serif;
     position: relative;
     transition: color 0.3s ease;
 }
@@ -433,7 +444,7 @@ body {
 }
 
 .carousel-btn.next {
-    right: 1rem;
+    right: 3rem;
 }
 
 .carousel-dots {
@@ -1068,6 +1079,13 @@ table tr:last-child {
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     }
 
+    .logo-icon img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+
+}
+
     .nav-menu.active {
         left: 0;
     }
@@ -1127,7 +1145,7 @@ table tr:last-child {
     }
 
     .carousel-btn.next {
-        right: 0.5rem;
+        right: 2rem;
     }
 
     .property-card {
