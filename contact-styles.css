@@ -1,0 +1,218 @@
+/* ============================================
+   CONTACT PAGE STYLES
+   ============================================ */
+
+/* Contact Hero Section */
+.contact-hero {
+    background: linear-gradient(135deg, var(--primary-navy) 0%, rgba(20, 30, 48, 0.95) 100%);
+    padding: 5rem 2rem;
+    text-align: center;
+    color: white;
+    animation: fadeIn 0.8s ease-out;
+    margin-top: 60px;
+}
+
+.nav-logo {
+    font-size: 1.8rem;
+    font-family: 'Cinzel Decorative', serif;
+    font-weight: bold;
+    color: var(--gold);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    animation: slideInLeft 0.8s ease-out;
+}
+
+.contact-hero-content h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    color: var(--gold);
+    animation: slideInDown 0.8s ease-out;
+}
+
+.contact-hero-content p {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.9);
+    animation: slideInUp 0.8s ease-out 0.1s backwards;
+}
+
+/* Contact Section */
+.contact-section {
+    max-width: 1200px;
+    margin: 5rem auto;
+    padding: 0 2rem;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.contact-info h3 {
+    font-size: 1.8rem;
+    color: var(--primary-navy);
+    margin-bottom: 2rem;
+    animation: slideInLeft 0.8s ease-out;
+}
+
+.info-item {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    animation: slideInLeft 0.8s ease-out;
+}
+
+.info-icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+}
+
+.info-label {
+    font-weight: bold;
+    color: var(--gold);
+    margin-bottom: 0.3rem;
+}
+
+.info-value {
+    color: var(--gray-dark);
+    line-height: 1.6;
+}
+
+/* Contact Form */
+.contact-form {
+    background: var(--gray-light);
+    padding: 2.5rem;
+    border-radius: 12px;
+    animation: slideInRight 0.8s ease-out;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    color: var(--primary-navy);
+    margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid var(--gray-medium);
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: var(--transition-smooth);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--gold);
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+    background: var(--white);
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.submit-button {
+    background: var(--gold);
+    color: var(--dark-navy);
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.submit-button:hover {
+    background: #f0c850;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
+}
+
+.submit-button:active {
+    transform: translateY(0);
+}
+
+.form-note {
+    font-size: 0.9rem;
+    color: var(--gray-dark);
+    text-align: center;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN FOR CONTACT PAGE
+   ============================================ */
+
+/* Mobile (320px - 480px) */
+@media (max-width: 480px) {
+    .contact-hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .contact-hero-content p {
+        font-size: 1rem;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .contact-form {
+        padding: 1.5rem;
+    }
+
+    .contact-info h3 {
+        font-size: 1.5rem;
+    }
+
+    .submit-button {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.95rem;
+    }
+}
+
+/* Tablet (481px - 768px) */
+@media (max-width: 768px) {
+    .contact-hero {
+        padding: 3rem 1.5rem;
+    }
+
+    .contact-hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .contact-section {
+        margin: 3rem auto;
+        padding: 0 1.5rem;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .info-item {
+        margin-bottom: 1.5rem;
+    }
+}

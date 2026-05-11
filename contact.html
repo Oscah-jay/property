@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - IRG</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="contact-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <span class="logo-icon"><img src="Assets/IRG-icon.png" alt="" srcset=""></span>
+                Imani Realty Groups
+            </a>
+            <div class="nav-menu">
+                <a href="index.html#properties" class="nav-link">Properties</a>
+                <a href="index.html#testimonials" class="nav-link">Reviews</a>
+                <a href="contact.html" class="nav-link active">Contact</a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Hero -->
+    <section class="contact-hero">
+        <div class="contact-hero-content">
+            <h1>Get In Touch With Us</h1>
+            <p>We're here to help you find your dream property or list your property with us</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Contact Our Team</h3>
+                <div class="info-item">
+                    <span class="info-icon">
+                        <i class="fa-solid fa-map-marker-alt"></i>
+                    </span>
+                    <div>
+                        <p class="info-label">Address</p>
+                        <p class="info-value">Imani Realty Groups, 999 Luxury Lane, Premium City, PC 00000</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <span class="info-icon">
+                        <i class="fas fa-phone"></i>
+                    </span>
+                    <div>
+                        <p class="info-label">Phone</p>
+                        <p class="info-value">+1 (555) 000-0000</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <span class="info-icon">
+                        <i class="fas fa-envelope"></i>
+                    </span>
+                    <div>
+                        <p class="info-label">Email</p>
+                        <p class="info-value">info@imanirealtygroups.com</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <span class="info-icon">
+                        <i class="fas fa-clock"></i>
+                    </span>
+                    <div>
+                        <p class="info-label">Business Hours</p>
+                        <p class="info-value">Mon - Fri: 9:00 AM - 6:00 PM<br>Sat - Sun: 10:00 AM - 4:00 PM</p>
+                    </div>
+                </div>
+            </div>
+
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                <div class="form-group full-width">
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="submit-button">Send Inquiry</button>
+                <p class="form-note">We'll respond to your inquiry within 24 hours.</p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 Imani Realty Groups. All rights reserved.</p>
+        <p>Premium Real Estate & Land Development</p>
+    </footer>
+
+    <!-- Floating WhatsApp Chat Bubble -->
+    <a href="https://wa.me/1234567890?text=Hello%20I%20am%20interested%20in%20your%20properties" target="_blank" class="whatsapp-bubble" title="Chat with us on WhatsApp">
+        <span class="whatsapp-icon">
+            <i class="fab fa-whatsapp"></i>
+        </span>
+    </a>
+
+    <!-- Web3Forms Configuration -->
+    <script>
+        window.WEB3FORMS_ACCESS_KEY = 'b8bfc36e-d104-4d18-920c-d97e9a615144';
+    </script>
+
+    <script src="contact-script.js"></script>
+</body>
+</html>
