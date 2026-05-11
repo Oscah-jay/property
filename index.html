@@ -464,6 +464,145 @@
         </div>
     </section>
 
+    <!-- Buyer vs Seller Section -->
+    <section class="buyer-seller-section">
+        <h2 class="section-title">Join Our Community</h2>
+        <p class="section-subtitle">Are you looking to buy or sell? Choose your path below.</p>
+        
+        <div class="buyer-seller-container">
+            <!-- Buyer Option -->
+            <div class="buyer-seller-card buyer-card">
+                <span class="card-icon">
+                    <i class="fa-solid fa-house"></i>
+                </span>
+                <h3>Looking to Buy?</h3>
+                <p>Discover premium properties tailored to your needs. Our expert team will guide you through every step.</p>
+                <button class="buyer-seller-btn buyer-btn" onclick="openBuyerForm()">I'm a Buyer</button>
+            </div>
+
+            <!-- Seller Option -->
+            <div class="buyer-seller-card seller-card">
+                <span class="card-icon">
+                    <i class="fa-solid fa-bullhorn"></i>
+                </span>
+                <h3>Want to Sell?</h3>
+                <p>List your property with us and reach thousands of qualified buyers. Maximize your property's value.</p>
+                <button class="buyer-seller-btn seller-btn" onclick="openSellerForm()">I'm a Seller</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Buyer Form Modal -->
+    <div id="buyerModal" class="form-modal">
+        <div class="form-modal-content">
+            <span class="form-close" onclick="closeBuyerForm()">&times;</span>
+            <h3>Buyer Registration Form</h3>
+            <form id="buyerForm" onsubmit="submitBuyerForm(event)">
+                <div class="form-group">
+                    <label for="buyerName">Full Name</label>
+                    <input type="text" id="buyerName" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="buyerEmail">Email Address</label>
+                    <input type="email" id="buyerEmail" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="buyerPhone">Phone Number</label>
+                    <input type="tel" id="buyerPhone" name="phone" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="buyerBudget">Budget Range</label>
+                    <select id="buyerBudget" name="budget" required>
+                        <option value="">Select your budget</option>
+                        <option value="under-100k">Under $100,000</option>
+                        <option value="100k-250k">$100,000 - $250,000</option>
+                        <option value="250k-500k">$250,000 - $500,000</option>
+                        <option value="500k-1m">$500,000 - $1,000,000</option>
+                        <option value="above-1m">Above $1,000,000</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="buyerPreference">Property Preference</label>
+                    <select id="buyerPreference" name="preference" required>
+                        <option value="">Select property type</option>
+                        <option value="land">Land</option>
+                        <option value="residential">Residential</option>
+                        <option value="commercial">Commercial</option>
+                        <option value="mixed">Mixed Use</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="buyerMessage">Additional Message</label>
+                    <textarea id="buyerMessage" name="message" rows="4" placeholder="Tell us about your requirements..."></textarea>
+                </div>
+
+                <button type="submit" class="form-submit-btn">Submit as Buyer</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Seller Form Modal -->
+    <div id="sellerModal" class="form-modal">
+        <div class="form-modal-content">
+            <span class="form-close" onclick="closeSellerForm()">&times;</span>
+            <h3>Property Listing Form</h3>
+            <form id="sellerForm" onsubmit="submitSellerForm(event)">
+                <div class="form-group">
+                    <label for="sellerName">Full Name</label>
+                    <input type="text" id="sellerName" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="sellerEmail">Email Address</label>
+                    <input type="email" id="sellerEmail" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="sellerPhone">Phone Number</label>
+                    <input type="tel" id="sellerPhone" name="phone" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="propertyAddress">Property Address</label>
+                    <input type="text" id="propertyAddress" name="address" placeholder="Enter property location" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="propertyType">Property Type</label>
+                    <select id="propertyType" name="type" required>
+                        <option value="">Select property type</option>
+                        <option value="land">Land</option>
+                        <option value="residential">Residential</option>
+                        <option value="commercial">Commercial</option>
+                        <option value="mixed">Mixed Use</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="propertySize">Property Size (sq ft)</label>
+                    <input type="number" id="propertySize" name="size" placeholder="e.g., 5000" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="propertyPrice">Asking Price</label>
+                    <input type="number" id="propertyPrice" name="price" placeholder="e.g., 500000" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="propertyDescription">Property Description</label>
+                    <textarea id="propertyDescription" name="description" rows="4" placeholder="Describe your property..." required></textarea>
+                </div>
+
+                <button type="submit" class="form-submit-btn">Submit Listing</button>
+            </form>
+        </div>
+    </div>
+
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
         <h2 class="section-title">Get In Touch</h2>

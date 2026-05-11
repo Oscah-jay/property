@@ -85,6 +85,121 @@ function moveCarousel(button, direction) {
 }
 
 // ============================================
+// BUYER/SELLER FORMS
+// ============================================
+
+function openBuyerForm() {
+    document.getElementById('buyerModal').style.display = 'block';
+}
+
+function closeBuyerForm() {
+    document.getElementById('buyerModal').style.display = 'none';
+}
+
+function openSellerForm() {
+    document.getElementById('sellerModal').style.display = 'block';
+}
+
+function closeSellerForm() {
+    document.getElementById('sellerModal').style.display = 'none';
+}
+
+// Close form when clicking outside
+window.addEventListener('click', (e) => {
+    const buyerModal = document.getElementById('buyerModal');
+    const sellerModal = document.getElementById('sellerModal');
+    
+    if (e.target === buyerModal) {
+        buyerModal.style.display = 'none';
+    }
+    if (e.target === sellerModal) {
+        sellerModal.style.display = 'none';
+    }
+});
+
+// Close forms with Escape key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        document.getElementById('buyerModal').style.display = 'none';
+        document.getElementById('sellerModal').style.display = 'none';
+    }
+});
+
+function submitBuyerForm(event) {
+    event.preventDefault();
+    
+    const formData = {
+        type: 'buyer',
+        name: document.getElementById('buyerName').value,
+        email: document.getElementById('buyerEmail').value,
+        phone: document.getElementById('buyerPhone').value,
+        budget: document.getElementById('buyerBudget').value,
+        preference: document.getElementById('buyerPreference').value,
+        message: document.getElementById('buyerMessage').value,
+        timestamp: new Date().toLocaleString()
+    };
+
+    console.log('[v0] Buyer Form Submitted:', formData);
+    
+    // Show success message
+    const buyerForm = document.getElementById('buyerForm');
+    const submitBtn = buyerForm.querySelector('.form-submit-btn');
+    const originalText = submitBtn.textContent;
+    
+    submitBtn.textContent = '✓ Application Submitted!';
+    submitBtn.disabled = true;
+    
+    // Reset form and close after 2 seconds
+    setTimeout(() => {
+        buyerForm.reset();
+        document.getElementById('buyerModal').style.display = 'none';
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+    }, 2000);
+
+    // Here you can send the data to your backend server
+    // Example: fetch('/api/buyer-inquiry', { method: 'POST', body: JSON.stringify(formData) })
+}
+
+function submitSellerForm(event) {
+    event.preventDefault();
+    
+    const formData = {
+        type: 'seller',
+        name: document.getElementById('sellerName').value,
+        email: document.getElementById('sellerEmail').value,
+        phone: document.getElementById('sellerPhone').value,
+        address: document.getElementById('propertyAddress').value,
+        propertyType: document.getElementById('propertyType').value,
+        size: document.getElementById('propertySize').value,
+        price: document.getElementById('propertyPrice').value,
+        description: document.getElementById('propertyDescription').value,
+        timestamp: new Date().toLocaleString()
+    };
+
+    console.log('[v0] Seller Form Submitted:', formData);
+    
+    // Show success message
+    const sellerForm = document.getElementById('sellerForm');
+    const submitBtn = sellerForm.querySelector('.form-submit-btn');
+    const originalText = submitBtn.textContent;
+    
+    submitBtn.textContent = '✓ Listing Submitted!';
+    submitBtn.disabled = true;
+    
+    // Reset form and close after 2 seconds
+    setTimeout(() => {
+        sellerForm.reset();
+        document.getElementById('sellerModal').style.display = 'none';
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+    }, 2000);
+
+    // Here you can send the data to your backend server
+    // Example: fetch('/api/property-listing', { method: 'POST', body: JSON.stringify(formData) })
+}
+
+// ============================================
 // LIGHTBOX GALLERY
 // ============================================
 
