@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Properties - Imani Realty Groups</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="properties-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <span class="logo-icon"><img src="Assets/IRG-icon.png" alt="" srcset=""></span>
+                Imani Realty Groups
+                </a>
+            </div>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html#properties">Featured</a></li>
+                <li><a href="index.html#testimonials">Testimonials</a></li>
+                <li><a href="index.html" class="nav-cta">Home</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="properties-page-header">
+        <h1>All Available Properties</h1>
+        <p>Explore our complete portfolio of premium properties</p>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="filter-section">
+        <div class="filter-container">
+            <h2>Search & Filter</h2>
+            <div class="filter-controls">
+                <div class="filter-group">
+                    <label for="typeFilter">Property Type:</label>
+                    <select id="typeFilter" onchange="filterProperties()">
+                        <option value="">All Types</option>
+                        <option value="Beachfront Estate">Beachfront</option>
+                        <option value="Mountain Estate">Mountain</option>
+                        <option value="Urban Penthouse">Urban</option>
+                        <option value="Residential">Residential</option>
+                        <option value="Commercial">Commercial</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="priceFilter">Price Range:</label>
+                    <select id="priceFilter" onchange="filterProperties()">
+                        <option value="">All Prices</option>
+                        <option value="under-1m">Under $1M</option>
+                        <option value="1m-2m">$1M - $2M</option>
+                        <option value="2m-3m">$2M - $3M</option>
+                        <option value="above-3m">Above $3M</option>
+                    </select>
+                </div>
+                <button class="reset-filter" onclick="resetFilters()">Reset Filters</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Properties Grid -->
+    <section class="all-properties-section">
+        <div class="properties-grid">
+            <!-- Property 1 -->
+            <div class="property-list-card" data-type="Beachfront Estate" data-price="2500000">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&h=300&fit=crop" alt="Luxury Beachfront Estate">
+                    <span class="price-badge">$2,500,000</span>
+                </div>
+                <div class="card-content">
+                    <h3>Luxury Beachfront Estate</h3>
+                    <p class="location">Coastal City, CA</p>
+                    <div class="card-specs">
+                        <span>2.5 Acres</span>
+                        <span>5 Beds</span>
+                        <span>4 Baths</span>
+                    </div>
+                    <p class="description">Stunning beachfront property with panoramic ocean views and modern amenities.</p>
+                    <a href="index.html#properties" class="view-details">View Details</a>
+                </div>
+            </div>
+
+            <!-- Property 2 -->
+            <div class="property-list-card" data-type="Mountain Estate" data-price="1800000">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=400&h=300&fit=crop" alt="Mountain Valley Estate">
+                    <span class="price-badge">$1,800,000</span>
+                </div>
+                <div class="card-content">
+                    <h3>Mountain Valley Estate</h3>
+                    <p class="location">Alpine Valley, CO</p>
+                    <div class="card-specs">
+                        <span>4.0 Acres</span>
+                        <span>6 Beds</span>
+                        <span>5 Baths</span>
+                    </div>
+                    <p class="description">Majestic mountain property with breathtaking valley views and complete privacy.</p>
+                    <a href="index.html#properties" class="view-details">View Details</a>
+                </div>
+            </div>
+
+            <!-- Property 3 -->
+            <div class="property-list-card" data-type="Urban Penthouse" data-price="3200000">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1449844908441-8829872d2607?w=400&h=300&fit=crop" alt="Urban Luxury Penthouse">
+                    <span class="price-badge">$3,200,000</span>
+                </div>
+                <div class="card-content">
+                    <h3>Urban Luxury Penthouse</h3>
+                    <p class="location">Downtown, NY</p>
+                    <div class="card-specs">
+                        <span>5,500 sqft</span>
+                        <span>4 Beds</span>
+                        <span>3.5 Baths</span>
+                    </div>
+                    <p class="description">Ultra-modern penthouse with floor-to-ceiling windows and stunning skyline views.</p>
+                    <a href="index.html#properties" class="view-details">View Details</a>
+                </div>
+            </div>
+
+            <!-- Property 4 -->
+            <div class="property-list-card" data-type="Residential" data-price="950000">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1600573472550-8090b5e0745e?w=400&h=300&fit=crop" alt="Modern Family Home">
+                    <span class="price-badge">$950,000</span>
+                </div>
+                <div class="card-content">
+                    <h3>Modern Family Home</h3>
+                    <p class="location">Suburban Heights, CA</p>
+                    <div class="card-specs">
+                        <span>1.5 Acres</span>
+                        <span>4 Beds</span>
+                        <span>3 Baths</span>
+                    </div>
+                    <p class="description">Contemporary home perfect for families seeking modern comfort and suburban living.</p>
+                    <a href="contact.html" class="view-details">Schedule Tour</a>
+                </div>
+            </div>
+
+            <!-- Property 5 -->
+            <div class="property-list-card" data-type="Commercial" data-price="1200000">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1497366216548-495f67e25284?w=400&h=300&fit=crop" alt="Prime Commercial Space">
+                    <span class="price-badge">$1,200,000</span>
+                </div>
+                <div class="card-content">
+                    <h3>Prime Commercial Space</h3>
+                    <p class="location">Business District, TX</p>
+                    <div class="card-specs">
+                        <span>8,000 sqft</span>
+                        <span>Open Plan</span>
+                        <span>Prime Location</span>
+                    </div>
+                    <p class="description">Ideal commercial property in a high-traffic business district with excellent visibility.</p>
+                    <a href="contact.html" class="view-details">Schedule Tour</a>
+                </div>
+            </div>
+
+            <!-- Property 6 -->
+            <div class="property-list-card" data-type="Residential" data-price="1100000">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&h=300&fit=crop" alt="Luxury Villa">
+                    <span class="price-badge">$1,100,000</span>
+                </div>
+                <div class="card-content">
+                    <h3>Luxury Villa with Pool</h3>
+                    <p class="location">Paradise Hills, FL</p>
+                    <div class="card-specs">
+                        <span>2.0 Acres</span>
+                        <span>5 Beds</span>
+                        <span>4 Baths</span>
+                    </div>
+                    <p class="description">Stunning villa with resort-style amenities and lush landscaping throughout.</p>
+                    <a href="contact.html" class="view-details">Schedule Tour</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="properties-cta">
+        <h2>Interested in Any of These Properties?</h2>
+        <p>Contact our team to schedule a viewing or get more information</p>
+        <div class="properties-cta-buttons">
+            <a href="contact.html" class="cta-btn cta-primary">Get in Touch</a>
+            <a href="index.html#buyer-seller" class="cta-btn cta-secondary">List Your Property</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 Imani Realty Groups. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="contact.html">Contact</a>
+                <a href="#privacy">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Chat Bubble -->
+    <a href="https://wa.me/1234567890?text=Hello%20I%20am%20interested%20in%20your%20properties" target="_blank" class="whatsapp-bubble" title="Chat with us on WhatsApp">
+        <span class="whatsapp-icon">
+            <i class="fab fa-whatsapp"></i>
+        </span>
+    </a>
+
+    <!-- Web3Forms Configuration -->
+    <script>
+        window.WEB3FORMS_ACCESS_KEY = 'YOUR_WEB3FORMS_ACCESS_KEY';
+    </script>
+
+    <script src="properties-script.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

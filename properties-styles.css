@@ -1,0 +1,401 @@
+/* ============================================
+   PROPERTIES LISTING PAGE STYLES
+   ============================================ */
+.nav-logo {
+    font-size: 1.8rem;
+    font-family: 'Cinzel Decorative', serif;
+    font-weight: bold;
+    color: var(--gold);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    animation: slideInLeft 0.8s ease-out;
+}
+.nav-logo a {
+    color: var(--gold);
+    text-decoration: none;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 2rem;
+    font-family: 'Cinzel Decorative', serif;
+    text-decoration: none;
+}
+.nav-menu a {
+    color: white;
+    font-weight: 600;
+    transition: var(--transition-smooth);
+    text-decoration: none;
+}
+.nav-menu a:hover {
+    color: var(--gold);
+    text-decoration: underline;
+    transition: var(--transition-smooth);
+}
+.properties-page-header {
+    background: linear-gradient(135deg, var(--primary-navy) 0%, var(--accent-navy) 100%);
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+    animation: fadeIn 0.8s ease-out;
+}
+
+.properties-page-header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+    animation: slideInDown 0.8s ease-out;
+}
+
+.properties-page-header p {
+    font-size: 1.2rem;
+    color: var(--gold);
+    animation: slideInUp 0.8s ease-out 0.1s backwards;
+}
+
+/* ============================================
+   FILTER SECTION
+   ============================================ */
+
+.filter-section {
+    background: var(--white);
+    padding: 2.5rem;
+    margin: 2rem auto;
+    max-width: 1200px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    animation: slideInUp 0.8s ease-out;
+}
+
+.filter-container h2 {
+    font-size: 1.5rem;
+    color: var(--primary-navy);
+    margin-bottom: 1.5rem;
+}
+
+.filter-controls {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+.filter-group {
+    flex: 1;
+    min-width: 200px;
+}
+
+.filter-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--primary-navy);
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.filter-group select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid var(--gray-light);
+    border-radius: 6px;
+    font-size: 0.95rem;
+    transition: var(--transition-smooth);
+}
+
+.filter-group select:focus {
+    outline: none;
+    border-color: var(--gold);
+    box-shadow: 0 0 8px rgba(212, 175, 55, 0.2);
+}
+
+.reset-filter {
+    padding: 0.8rem 1.5rem;
+    background: var(--gold);
+    color: var(--primary-navy);
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+}
+
+.reset-filter:hover {
+    background: #f0c850;
+    transform: translateY(-2px);
+}
+
+/* ============================================
+   PROPERTIES GRID
+   ============================================ */
+
+.all-properties-section {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+}
+
+.properties-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.property-list-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: var(--transition-smooth);
+    animation: slideInUp 0.8s ease-out;
+    display: flex;
+    flex-direction: column;
+}
+
+.property-list-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.2);
+}
+
+.card-image {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition-smooth);
+}
+
+.property-list-card:hover .card-image img {
+    transform: scale(1.05);
+}
+
+.price-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--gold);
+    color: var(--primary-navy);
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+}
+
+.card-content {
+    padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-content h3 {
+    font-size: 1.3rem;
+    color: var(--primary-navy);
+    margin-bottom: 0.5rem;
+}
+
+.location {
+    color: var(--gray-medium);
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+}
+
+.card-specs {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+    flex-wrap: wrap;
+}
+
+.card-specs span {
+    background: var(--gray-very-light);
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: var(--primary-navy);
+    font-weight: 500;
+}
+
+.description {
+    color: var(--gray-medium);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    flex: 1;
+    margin-bottom: 1rem;
+}
+
+.view-details {
+    display: inline-block;
+    background: var(--primary-navy);
+    color: white;
+    padding: 0.7rem 1.5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    text-align: center;
+    transition: var(--transition-smooth);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.view-details:hover {
+    background: var(--gold);
+    color: var(--primary-navy);
+    transform: translateY(-2px);
+}
+
+/* ============================================
+   NO RESULTS MESSAGE
+   ============================================ */
+
+.no-results {
+    text-align: center;
+    padding: 3rem 2rem;
+    color: var(--gray-medium);
+}
+
+.no-results h3 {
+    font-size: 1.5rem;
+    color: var(--primary-navy);
+    margin-bottom: 0.5rem;
+}
+
+/* ============================================
+   PROPERTIES CTA SECTION
+   ============================================ */
+
+.properties-cta {
+    background: linear-gradient(135deg, var(--primary-navy) 0%, var(--accent-navy) 100%);
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+    margin-top: 4rem;
+    animation: fadeIn 0.8s ease-out;
+}
+
+.properties-cta h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: var(--gold);
+}
+
+.properties-cta p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.properties-cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cta-btn {
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: var(--transition-smooth);
+    display: inline-block;
+}
+
+.cta-primary {
+    background: var(--gold);
+    color: var(--primary-navy);
+}
+
+.cta-primary:hover {
+    background: #f0c850;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
+}
+
+.cta-secondary {
+    background: transparent;
+    color: var(--gold);
+    border: 2px solid var(--gold);
+}
+
+.cta-secondary:hover {
+    background: var(--gold);
+    color: var(--primary-navy);
+    transform: translateY(-2px);
+}
+
+.footer-links a {
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    margin-top: 4rem;
+    text-decoration: none;
+}
+.footer-links a:hover {
+    color: var(--gold);
+    text-decoration: underline;
+}
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 768px) {
+    .properties-page-header h1 {
+        font-size: 2rem;
+    }
+
+    .properties-page-header p {
+        font-size: 1rem;
+    }
+
+    .filter-section {
+        padding: 1.5rem;
+        margin: 1.5rem 1rem;
+    }
+
+    .filter-controls {
+        flex-direction: column;
+    }
+
+    .filter-group {
+        width: 100%;
+    }
+
+    .reset-filter {
+        width: 100%;
+    }
+
+    .properties-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .card-image {
+        height: 200px;
+    }
+
+    .card-content {
+        padding: 1.2rem;
+    }
+
+    .properties-cta h2 {
+        font-size: 1.5rem;
+    }
+
+    .properties-cta p {
+        font-size: 0.95rem;
+    }
+
+    .cta-btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+    }
+}

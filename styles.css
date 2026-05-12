@@ -1074,6 +1074,34 @@ table tr:last-child {
     transform: scale(1.05);
 }
 
+.view-all-container {
+    text-align: center;
+    margin-top: 4rem;
+    animation: slideInUp 0.8s ease-out 0.3s backwards;
+}
+
+.view-all-button {
+    display: inline-block;
+    padding: 1.2rem 3rem;
+    background: linear-gradient(135deg, var(--primary-navy) 0%, var(--accent-navy) 100%);
+    color: var(--gold);
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: var(--transition-smooth);
+    border: 2px solid var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.view-all-button:hover {
+    background: var(--gold);
+    color: var(--primary-navy);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+}
+
 /* ============================================
    FORM MODAL STYLES
    ============================================ */
